@@ -14,7 +14,6 @@ public class Main {
 	public static void main(String[] args) {
 		Persona persona = ingresarDatos();
 		mostrarDatos(persona);
-		
 	}
 
 	public static Calendar parsearFecha(String fechaStr) {
@@ -43,6 +42,9 @@ public class Main {
 		String nombre = entrada.nextLine();
 		System.out.print("Ingrese su fecha de nacimiento (d/m/YYYY): ");
 		String fechaNacimientoStr = entrada.nextLine();
+		
+		// Cerrar el Scanner después de usarlo
+        entrada.close();
 
 		// Parsear la fecha de nacimiento
 		Calendar fechaNacimiento = parsearFecha(fechaNacimientoStr);
