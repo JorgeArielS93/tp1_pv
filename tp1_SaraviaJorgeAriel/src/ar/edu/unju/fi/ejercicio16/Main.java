@@ -30,7 +30,7 @@ public class Main {
         int indice;
         do {
             System.out.print("\nIngrese el índice del elemento a eliminar (entre 0 y " + (nombres.length - 1) + "): ");
-            indice = entrada.nextByte();
+            indice = entrada.nextInt();
         } while (indice < 0 || indice >= nombres.length);
 
         // Eliminar el elemento del arreglo y desplazar los otros elementos si es necesario
