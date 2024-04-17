@@ -186,7 +186,7 @@ public class Main {
 	    } catch (Exception e) {
 	        System.out.println("Ocurrió un error al modificar los datos del jugador: " + e.getMessage());
 	    } finally {
-	        entrada.nextLine(); // Limpiar basura del buffer
+	        entrada.nextLine(); // Limpiar residuos del bufer
 	    }
 	}
 
