@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -11,8 +12,8 @@ import ar.edu.unju.fi.ejercicio18.model.DestinoTuristico;
 import ar.edu.unju.fi.ejercicio18.model.Pais;
 
 public class Main {
-	public static ArrayList<DestinoTuristico> destinosTuristicos = new ArrayList<>();
-	public static ArrayList<Pais> paises = new ArrayList<>();
+	public static List<DestinoTuristico> destinosTuristicos = new ArrayList<>();
+	public static List<Pais> paises = new ArrayList<>();
 	public static Scanner entrada = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -101,7 +102,12 @@ public class Main {
 			double precio = entrada.nextDouble();
 			entrada.nextLine(); // Limpiar basura del buffer
 
-			System.out.print("Ingrese el país (código): ");
+			System.out.println("\nIngrese el país (código) \n");
+			for (Pais pais : paises) {
+				System.out.println(pais.getCodigo()+"  "+pais.getNombre());
+			}
+			System.out.print("\nIngrese el codigo correspondiente:");
+			
 			String codigoPais = entrada.nextLine();
 			Pais pais = null;
 			// Busco el país en la lista de países
